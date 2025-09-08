@@ -231,20 +231,7 @@ where rst.return_id is null
 order by m.member_id;
 ```
 
-
-**Task 14: Update Book Status on Return**  
-Write a query to update the status of books in the books table to "Yes" when they are returned (based on entries in the return_status table).
-
-
-```sql
-
-
-```
-
-
-
-
-**Task 15: Branch Performance Report**  
+**Task 14: Branch Performance Report**  
 Create a query that generates a performance report for each branch, showing the number of books issued, the number of books returned, and the total revenue generated from book rentals.
 
 ```sql
@@ -263,7 +250,7 @@ group by e.branch_id
 order by total_revenue desc;
 ```
 
-**Task 16: Create view**
+**Task 15: Create view**
 Create view of active members containing members who have issued atleast one book in the last 8 months.
 
 ```sql
@@ -280,7 +267,7 @@ select * from active_members;
 ```
 
 
-**Task 17: Find Employees with the Most Book Issues Processed**  
+**Task 16: Find Employees with the Most Book Issues Processed**  
 Write a query to find the top 3 employees who have processed the most book issues. Display the employee name, number of books processed, and their branch.
 
 ```sql
@@ -295,7 +282,7 @@ where ranks <= 3 ;
 
 ```
 
-**Task 18: Identify book that issued more than once**  
+**Task 17: Identify book that issued more than once**  
 Write a query to to find the books issued for more than once. Display the member name, book title, and the number of times they've issued books.    
 
 ```sql
@@ -307,24 +294,7 @@ order by number_of_item_book_isseued desc)t1
 where number_of_item_book_isseued >1;
 ```
 
-
-**Task 19: Stored Procedure**
-Objective:
-Create a stored procedure to manage the status of books in a library system.
-Description:
-Write a stored procedure that updates the status of a book in the library based on its issuance. The procedure should function as follows:
-The stored procedure should take the book_id as an input parameter.
-The procedure should first check if the book is available (status = 'yes').
-If the book is available, it should be issued, and the status in the books table should be updated to 'no'.
-If the book is not available (status = 'no'), the procedure should return an error message indicating that the book is currently not available.
-
-```sql
-
-```
-
-
-
-**Task 20: Create view **
+**Task 18: Create view **
 Objective: Create a view query to identify overdue books and calculate fines.
 
 Description: Write a query to create a new table that lists each member and the books they have issued but not returned within 30 days. The table should include:
